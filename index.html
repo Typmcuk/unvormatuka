@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Информатика — платформа курса</title>
+<style>
+:root{--bg:#f5f6fa;--card:#fff;--tx:#1b2030;--mu:#667;--ac:#2f5bea;--ac2:#e8eeff;--ok:#1a9a5b;--wa:#d98a00;--bd:#dde1ec;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--card);border-bottom:1px solid var(--bd);padding:10px 16px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+header b{font-size:18px;margin-right:auto}
+main{max-width:980px;margin:0 auto;padding:16px}
+button,select,input,textarea{font:inherit;color:var(--tx)}
+button{background:var(--ac2);border:1px solid var(--bd);border-radius:10px;padding:7px 13px;cursor:pointer}
+button.p{background:var(--ac);color:#fff;border-color:var(--ac)}button.on{background:var(--ac);color:#fff}
+input,select,textarea{width:100%;background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:9px 11px;margin:4px 0 10px}
+textarea{min-height:90px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:16px;margin-bottom:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px}
+.les{text-align:left;padding:12px;background:var(--card);border-radius:12px;display:block;width:100%}
+.les small{color:var(--mu)}.tag{font-size:12px;border-radius:20px;padding:1px 8px;background:var(--ac2);color:var(--ac)}
+.ok{color:var(--ok)}.wa{color:var(--wa)}.mu{color:var(--mu)}
+h2{margin:6px 0 10px}h3{margin:14px 0 6px}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.sc{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:14px}td,th{border-bottom:1px solid var(--bd);padding:7px 8px;text-align:left;white-space:nowrap}
+.opt{display:block;width:100%;text-align:left;margin:5px 0}.good{background:var(--ok);color:#fff}.bad{background:#d44;color:#fff}
+.msg{border-left:3px solid var(--ac);padding:4px 10px;margin:8px 0}.rep{border-left-color:var(--ok);margin-left:18px}
+.rate button{font-size:20px;padding:8px 14px}
+iframe{width:100%;aspect-ratio:16/9;border:0;border-radius:12px}
+</style></head><body>
+<header id="hd"><b>💻 Информатика</b></header>
+<main id="app">Загрузка…</main>
+<script>
+const SEC=["Здоровье и безопасность","Аппаратное и программное обеспечение","Представление данных","Информационные процессы и системы","Создание и преобразование информационных объектов","Разработка приложений","Компьютерные сети и информационная безопасность"];
+const OUT=["Владеть способами обеспечения безопасности пользователя и защиты компьютера.","Объяснять функции и принципы работы аппаратного обеспечения, процессоров и мобильных устройств, выбирать программное обеспечение.","Владеть навыками преобразования чисел в различных системах счисления, создания логических схем и выражений.","Владеть навыками создания базы данных, применения блокчейн и облачных технологий.","Владеть навыками 3D-моделирования и веб-проектирования.","Владеть навыками создания алгоритма и интерфейсов.","Применять меры информационной безопасности в отношении пользовательской информации."];
+const T=`Эргономика рабочего места. Отрицательные стороны использования компьютера
+Антивирусная безопасность. Онлайн-безопасность и онлайн-этикет
+Аппаратное обеспечение
+Описание и характеристики мобильных устройств
+Программное обеспечение
+Л/П №1. Операционные системы версии программного обеспечения
+Виртуальные машины
+Возможности использования виртуальных машин в технико-технологическом направлении
+Примеры программного обеспечения для технико-технологического направления
+Цифровые системы счисления
+Л/П №2. Перевод чисел из одной системы счисления в другую
+Преобразование чисел из одной системы счисления в другую
+Логические операции и выражения
+Л/П №3. Практикум. Логические операции
+Таблица истинности и ее создание
+Л/П №4. Практикум. Логические операции
+Кодирование информации
+Л/П №5. Кодирует и декодирует информацию
+Bigdata (большие данные)
+Основные понятия базы данных. Реляционная база данных. Первичный ключ
+Л/П №6. Создать однотабличную и многотабличную базу данных и образец запроса с помощью конструктора
+Разработка базы данных SQL: типы данных, однотабличные и многотабличные базы данных
+Формы. Отчеты
+Контрольная работа №1
+Структурированные запросы: запросы выбора в режиме дизайнера, SQL, связь с базой данных на веб-страницах
+Примеры создания и использования базы данных в технико-технологическом направлении
+Л/П №7. Систематизировать типы данных
+Современные процессы в развитии ИТ. Принципы машинного обучения. Нейронные сети
+Л/П №8. Файлы в общем доступе: совместное редактирование документов, таблиц, презентаций
+Искусственный интеллект. Сфера применения искусственного интеллекта
+Возможности использования искусственного интеллекта в технико-технологическом направлении
+Л/П №9. Анализ современных тенденций цифровизации в Казахстане
+Технология Blockchain (блокчейн)
+Облачные технологии. Назначение. Классификация
+Интернет вещей. Принципы работы, перспективы развития
+Сервисы облачных технологий. Сферы применения в технико-технологическом направлении
+Интернет вещей. Принципы работы, перспективы развития (продолжение)
+Современные тенденции цифровизации в Казахстане. Цифровизация технико-технологического направления
+Л/П №10. Электронная цифровая подпись и сертификат
+Электронная цифровая подпись и сертификат. Назначение, алгоритм использования
+Портал электронного правительства. Виды услуг в технико-технологической сфере
+Цифровая грамотность. Правовая защита информации
+Л/П №11. Цифровая грамотность. Правовая защита информации
+Виртуальная и дополненная реальность. Человек в виртуальной реальности
+Применение технологий VR и AR в технико-технологической сфере
+Создание 3D-панорамы (виртуального путешествия)
+Л/П №12. Создание 3D-панорамы технико-технологического направления
+Контрольная работа №2
+3D-панорама в технико-технологическом направлении
+HTML-документ. Главная страница сайта
+Использование каскадных таблиц стилей (CSS) для оформления страниц сайта
+Л/П №13. Разработка web-сайтов в HTML, форматирование текста и построение таблицы
+Наполнение сайта (контент). Мультимедиа на веб-странице
+Л/П №14. Внедрение мультимедиа и использование скриптов
+Шаблоны и дизайн сайтов для технико-технологической отрасли
+Публикация сайта и его продвижение
+Л/П №15. Написание кода на языке программирования с использованием процедур
+Пользовательские функции и процедуры
+Работа с файлами. Строками
+Л/П №16. Работа со строками
+Методы сортировки
+Л/П №17. Использование процедур и функций для обработки строк
+Мобильные приложения
+Л/П №18. Использование файлов для чтения и записи информации
+Интерфейс мобильного приложения. Требования к интерфейсу
+Конструкторы мобильных приложений и среда разработки
+Л/П №19. Реализация алгоритмов сортировки для решения практических задач
+Умный дом: программы для управления устройствами умного дома
+Л/П №20. Разработать программу для управления устройством умного дома
+Организация компьютерных сетей. Компоненты сети
+Информационная безопасность. Пароли, учетные записи, аутентификация, биометрия
+Зачет`.split("\n");
+const RNG=[2,9,18,43,57,69,72];
+const LS=T.map((t,i)=>{const n=i+1,s=RNG.findIndex(r=>n<=r);return{n,t,s,k:t.startsWith("Л/П")?"p":/^Контрольная/.test(t)?"k":t==="Зачет"?"z":"t"}});
+const KT={t:"Теоретическое занятие",p:"Лабораторно-практическая работа",k:"Контрольная работа",z:"Зачет"};
+const SEED={1:{lec:"Эргономика — наука о том, как организовать рабочее место, чтобы работа была удобной и безопасной.\nМонитор — на расстоянии 50–70 см от глаз, верхний край на уровне глаз. Спина опирается на спинку стула, локти согнуты примерно под прямым углом.\nКаждые 45–60 минут нужен перерыв и гимнастика для глаз и шеи.\nНегативные стороны: нагрузка на зрение, сидячий образ жизни, туннельный синдром, компьютерная зависимость.",tst:"Какое расстояние от глаз до монитора рекомендуется?|50–70 см|10–20 см|2 метра\nКак часто нужны перерывы в работе за ПК?|Каждые 45–60 минут|Раз в сутки|Не нужны"},
+10:{lec:"Система счисления — способ записи чисел с помощью цифр. Позиционные системы: значение цифры зависит от её места в числе.\nДвоичная (0, 1), восьмеричная (0–7), десятичная (0–9), шестнадцатеричная (0–9, A–F).\nПеревод в десятичную: сумма цифр, умноженных на степени основания. Пример: 1011₂ = 8+0+2+1 = 11.",tst:"Чему равно 1011₂ в десятичной системе?|11|13|9\nСколько цифр в двоичной системе?|2|8|10"},
+13:{lec:"Логические операции: НЕ (инверсия), И (конъюнкция), ИЛИ (дизъюнкция).\nИ истинно, только если истинны оба операнда. ИЛИ ложно, только если ложны оба. НЕ меняет значение на противоположное.\nПриоритет: НЕ, затем И, затем ИЛИ.",tst:"Результат 1 И 0?|0|1|2\nРезультат НЕ 0?|1|0|2"},
+50:{lec:"HTML — язык разметки веб-страниц. Документ состоит из <html>, <head> и <body>.\nЗаголовки — <h1>…<h6>, абзац — <p>, ссылка — <a href>, изображение — <img src>.\nГлавная страница сайта — файл index.html.",tst:"Какой тег задаёт абзац?|<p>|<a>|<img>\nКак называется главная страница сайта?|index.html|main.exe|site.doc"}};
+const CARDS={t:["Прочитать лекцию","Составить конспект (5 тезисов)","Подготовить 1 вопрос по теме"],p:["Изучить условие и критерии","Выполнить практическое задание","Отправить результат куратору","Защитить работу устно"],k:["Повторить темы раздела","Решить варианты заданий","Сдать работу"],z:["Повторить все разделы","Пройти итоговый тест","Ответить на вопросы педагога"]};
+const CODES={curator:"kur2026",teacher:"ped2026"};
+const $=s=>document.querySelector(s),esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const id=s=>[...String(s).trim().toLowerCase()].map(c=>c.charCodeAt(0).toString(36)).join("");
+let db=null,me=null,sem=1,view="home",lesN=null,cache={};
+const lj=c=>{try{return JSON.parse(localStorage.getItem("inf_"+c)||"{}")}catch{return{}}};
+const CFG={url:"",key:""}; // <-- вставьте Project URL и anon key из Supabase (см. README)
+const H=()=>({apikey:CFG.key,Authorization:"Bearer "+CFG.key,"Content-Type":"application/json"});
+const sha=async t=>[...new Uint8Array(await crypto.subtle.digest("SHA-256",new TextEncoder().encode("inf::"+t)))].map(x=>x.toString(16).padStart(2,"0")).join("");
+const S={async all(c){if(db){const r=await fetch(`${CFG.url}/rest/v1/kv?coll=eq.${c}&select=id,data`,{headers:H()});return(await r.json()).map(x=>({id:x.id,...x.data}))}return Object.entries(lj(c)).map(([i,v])=>({id:i,...v}))},
+async get(c,i){if(db){const r=await fetch(`${CFG.url}/rest/v1/kv?coll=eq.${c}&id=eq.${i}&select=data`,{headers:H()});const j=await r.json();return j[0]?.data||null}return lj(c)[i]||null},
+async set(c,i,v){if(db){await fetch(`${CFG.url}/rest/v1/kv?on_conflict=coll,id`,{method:"POST",headers:{...H(),Prefer:"resolution=merge-duplicates"},body:JSON.stringify({coll:c,id:i,data:v})});return}const o=lj(c);o[i]=v;try{localStorage.setItem("inf_"+c,JSON.stringify(o))}catch{}}};
+const ROLE={student:"Студент",curator:"Куратор",teacher:"Педагог (режим бога)"};
+async function init(){db=CFG.url?1:null
+try{const s=localStorage.getItem("inf_me");if(s)me=await S.get("acc",s)&&{...(await S.get("acc",s)),key:s}}catch{}
+go()}
+function head(){const h=$("#hd");h.innerHTML="<b>💻 Информатика</b>";if(!me)return;
+const nav=[["home","Уроки"],["msgs","Обратная связь"]];if(me.role!="student")nav.push(["panel",me.role=="teacher"?"Панель педагога":"Панель куратора"]);
+nav.forEach(([v,t])=>{const b=document.createElement("button");b.textContent=t;if(view==v||(v=="home"&&view=="lesson"))b.className="on";b.onclick=()=>{view=v;go()};h.append(b)});
+const s=document.createElement("span");s.className="mu";s.textContent=`${me.name} · ${ROLE[me.role]}${me.group?" · гр. "+me.group:""}`;h.append(s);
+const o=document.createElement("button");o.textContent="Выйти";o.onclick=()=>{localStorage.removeItem("inf_me");me=null;go()};h.append(o)}
+async function go(){head();const a=$("#app");if(!me)return auth(a);
+if(view=="home")return home(a);if(view=="lesson")return lesson(a);if(view=="msgs")return msgs(a);return panel(a)}
+function auth(a){let reg=false;const draw=()=>{a.innerHTML=`<div class="card" style="max-width:440px;margin:auto"><h2>${reg?"Регистрация":"Вход"}</h2>
+${reg?`<label>ФИО<input id="n"></label>`:""}<label>Логин<input id="l" autocapitalize="none"></label><label>Пароль<input id="p" type="password"></label>
+${reg?`<label>Роль<select id="r"><option value="student">Студент</option><option value="curator">Куратор / мастер</option><option value="teacher">Педагог</option></select></label>
+<label id="gw">Группа (например, 313)<input id="g"></label><label id="cw" hidden>Код доступа<input id="c" type="password"></label>`:""}
+<p id="er" class="wa"></p><button class="p" id="go">${reg?"Создать аккаунт":"Войти"}</button> <button id="sw">${reg?"Уже есть аккаунт":"Регистрация"}</button>
+<p class="mu" style="font-size:13px">${db?"Данные хранятся в облачной базе.":"Общая база недоступна — данные только в этом браузере."}</p></div>`;
+$("#sw").onclick=()=>{reg=!reg;draw()};
+if(reg)$("#r").onchange=e=>{$("#cw").hidden=e.target.value=="student";$("#gw").hidden=e.target.value=="teacher"};
+$("#go").onclick=async()=>{const l=$("#l").value.trim(),p=$("#p").value,k=id(l),er=$("#er");if(!l||!p)return er.textContent="Введите логин и пароль";
+const u=await S.get("acc",k);
+if(!reg){if(!u||u.pass!==await sha(p))return er.textContent="Неверный логин или пароль";me={...u,key:k}}
+else{if(u)return er.textContent="Логин занят";const r=$("#r").value,n=$("#n").value.trim(),g=$("#g").value.trim();
+if(!n)return er.textContent="Введите ФИО";if(r!="teacher"&&!g)return er.textContent="Укажите группу";
+if(r!="student"&&$("#c").value!==CODES[r])return er.textContent="Неверный код доступа";
+me={name:n,login:l,pass:await sha(p),role:r,group:r=="teacher"?"":g};await S.set("acc",k,me);me.key=k}
+try{localStorage.setItem("inf_me",k)}catch{}view="home";go()};};draw()}
+async function myProg(){return(await S.get("prog",me.key))||{}}
+async function home(a){const pr=await myProg();const L=LS.filter(l=>sem==1?l.n<=48:l.n>48);
+const done=L.filter(l=>pr[l.n]?.t!=null||pr[l.n]?.r).length;
+a.innerHTML=`<div class="tabs"><button class="${sem==1?"on":""}" id="s1">1 курс · 1 семестр (48 ч)</button><button class="${sem==2?"on":""}" id="s2">1 курс · 2 семестр (24 ч)</button></div>
+<p class="mu">Уроков: ${L.length} · начато: ${done}. Нажмите на урок, чтобы открыть.</p>`+
+SEC.map((s,si)=>{const x=L.filter(l=>l.s==si);return x.length?`<h3>Раздел ${si+1}. ${s}</h3><div class="grid">${x.map(l=>{const p=pr[l.n]||{};return`<button class="les" data-n="${l.n}"><small>Урок ${l.n} · <span class="tag">${KT[l.k]}</span></small><br>${esc(l.t)}<br><small class="${p.t!=null?"ok":"mu"}">${p.t!=null?"Тест: "+p.t+"%":"тест не пройден"}${p.f?" · "+["","😞","🙂","🤩"][p.f]:""}</small></button>`}).join("")}</div>`:""}).join("");
+$("#s1").onclick=()=>{sem=1;go()};$("#s2").onclick=()=>{sem=2;go()};
+a.querySelectorAll(".les").forEach(b=>b.onclick=()=>{lesN=+b.dataset.n;view="lesson";go();scrollTo(0,0)})}
+async function lesson(a){const l=LS[lesN-1],c=(await S.get("les",String(l.n)))||SEED[l.n]||{},pr=await myProg(),p=pr[l.n]||{};
+const save=async()=>{pr[l.n]=p;p.ts=Date.now();await S.set("prog",me.key,{...pr,_name:me.name,_group:me.group});};
+const q=(c.tst||"").split("\n").map(x=>x.split("|").map(s=>s.trim())).filter(x=>x.length>=3&&x[0]);
+const vid=(c.vid||"").match(/(?:v=|youtu\.be\/|embed\/)([\w-]{11})/);
+const lec=c.lec?c.lec.split("\n").map(x=>`<p>${esc(x)}</p>`).join(""):`<p class="mu">Лекционный материал по этой теме пока не загружен. ${me.role=="teacher"?"Добавьте его в редакторе ниже.":"Педагог добавит его в ближайшее время."}</p>`;
+const yt="https://www.youtube.com/results?search_query="+encodeURIComponent(l.t+" урок информатика на русском");
+a.innerHTML=`<button id="bk">← К списку уроков</button>
+<div class="card"><small class="mu">Раздел ${l.s+1}. ${SEC[l.s]} · Урок ${l.n} из 72 · ${KT[l.k]}</small><h2>${esc(l.t)}</h2><p class="mu">Цель раздела: ${OUT[l.s]}</p></div>
+<div class="card"><h3>📖 Лекционный материал</h3>${lec}<button id="rd" class="${p.r?"on":""}">${p.r?"✓ Прочитано":"Отметить как прочитано"}</button></div>
+<div class="card"><h3>▶️ Видео по теме (на русском)</h3>${vid?`<iframe src="https://www.youtube-nocookie.com/embed/${vid[1]}" allowfullscreen></iframe>`:""}
+<p><a href="${yt}" target="_blank" rel="noopener">Найти видео по теме на YouTube →</a></p></div>
+<div class="card"><h3>📝 Тестирование</h3><div id="tq"></div></div>
+<div class="card"><h3>🗂 Карточки заданий</h3><div class="grid" id="cd"></div></div>
+<div class="card"><h3>⭐ Рефлексия: как вам урок?</h3><div class="rate">${[[1,"😞 Плохо"],[2,"🙂 Хорошо"],[3,"🤩 Отлично"]].map(([v,t])=>`<button data-f="${v}" class="${p.f==v?"on":""}">${t}</button>`).join(" ")}</div></div>
+${me.role=="teacher"?`<div class="card"><h3>✏️ Редактор урока (педагог)</h3><label>Лекция (каждая строка — абзац)<textarea id="e1" style="min-height:140px">${esc(c.lec||"")}</textarea></label>
+<label>Ссылка на видео YouTube<input id="e2" value="${esc(c.vid||"")}"></label><label>Тест: по строке на вопрос — «Вопрос|Верный ответ|Неверный|Неверный»<textarea id="e3">${esc(c.tst||"")}</textarea></label><button class="p" id="sv">Сохранить урок</button></div>`:""}`;
+$("#bk").onclick=()=>{view="home";go()};
+$("#rd").onclick=async()=>{p.r=!p.r;await save();lesson(a)};
+a.querySelectorAll("[data-f]").forEach(b=>b.onclick=async()=>{p.f=+b.dataset.f;await save();lesson(a)});
+const cs=p.c||(p.c={});$("#cd").innerHTML=CARDS[l.k].map((t,i)=>`<div class="card" style="margin:0"><b>${i+1}. ${esc(t)}</b><br><button data-i="${i}" data-s="want" class="${cs[i]=="want"?"on":""}">Хочу выполнить</button> <button data-i="${i}" data-s="done" class="${cs[i]=="done"?"on":""}">Выполнено ✓</button></div>`).join("");
+a.querySelectorAll("[data-i]").forEach(b=>b.onclick=async()=>{const i=b.dataset.i;cs[i]=cs[i]==b.dataset.s?null:b.dataset.s;await save();lesson(a)});
+const tq=$("#tq");if(!q.length)tq.innerHTML=`<p class="mu">Тест для этого урока пока не добавлен.</p>`;else{let ok=0,ans=0;
+q.forEach((r,qi)=>{const d=document.createElement("div");d.innerHTML=`<b>${qi+1}. ${esc(r[0])}</b>`;[...r.slice(1)].sort(()=>Math.random()-.5).forEach(o=>{const b=document.createElement("button");b.className="opt";b.textContent=o;b.onclick=async()=>{if(d.dataset.d)return;d.dataset.d=1;ans++;const g=o==r[1];if(g)ok++;b.classList.add(g?"good":"bad");if(ans==q.length){p.t=Math.round(ok/q.length*100);await save();tq.insertAdjacentHTML("beforeend",`<p><b>Результат: ${ok} из ${q.length} (${p.t}%)</b></p>`)}};d.append(b)});tq.append(d)});
+if(p.t!=null)tq.insertAdjacentHTML("afterbegin",`<p class="ok">Последний результат: ${p.t}%. Можно пройти заново.</p>`)}
+if($("#sv"))$("#sv").onclick=async()=>{await S.set("les",String(l.n),{lec:$("#e1").value,vid:$("#e2").value,tst:$("#e3").value});lesson(a)}}
+async function msgs(a){const all=(await S.all("msg")).sort((x,y)=>x.ts-y.ts);
+const mine=me.role=="student"?all.filter(m=>m.from==me.key):me.role=="curator"?all.filter(m=>m.group==me.group):all;
+a.innerHTML=`<h2>Обратная связь</h2>${me.role=="student"?`<div class="card"><b>Задать вопрос куратору (гр. ${esc(me.group)})</b><textarea id="mt" placeholder="Ваш вопрос…"></textarea><button class="p" id="ms">Отправить</button></div>`:""}
+${mine.length?mine.map(m=>`<div class="card"><div class="msg"><b>${esc(m.fname)}</b> <span class="mu">гр. ${esc(m.group)} · ${new Date(m.ts).toLocaleString("ru-RU")}</span><br>${esc(m.text)}</div>
+${m.reply?`<div class="msg rep"><b>${esc(m.rby)}</b><br>${esc(m.reply)}</div>`:me.role!="student"?`<textarea data-r="${m.id}" placeholder="Ответ…"></textarea><button class="p" data-rb="${m.id}">Ответить</button>`:`<p class="mu">Ждём ответа куратора…</p>`}</div>`).join(""):`<p class="mu">Сообщений пока нет.</p>`}`;
+if($("#ms"))$("#ms").onclick=async()=>{const t=$("#mt").value.trim();if(!t)return;await S.set("msg",Date.now()+id(me.key).slice(0,6),{from:me.key,fname:me.name,group:me.group,text:t,ts:Date.now()});msgs(a)};
+a.querySelectorAll("[data-rb]").forEach(b=>b.onclick=async()=>{const k=b.dataset.rb,t=a.querySelector(`[data-r="${k}"]`).value.trim();if(!t)return;const m=mine.find(x=>x.id==k);const{id:_,...rest}=m;await S.set("msg",k,{...rest,reply:t,rby:me.name,rts:Date.now()});msgs(a)})}
+async function panel(a){const acc=(await S.all("acc")).filter(u=>u.role=="student"&&(me.role=="teacher"||u.group==me.group));
+const pr=Object.fromEntries((await S.all("prog")).map(p=>[p.id,p]));
+const groups=[...new Set(acc.map(u=>u.group))].sort(),f=cache.g||"";const rows=acc.filter(u=>!f||u.group==f);
+const st=u=>{const p=pr[u.id]||{},ls=Object.entries(p).filter(([k])=>!k.startsWith("_")),ts=ls.filter(([,v])=>v.t!=null);let w=0,d=0;ls.forEach(([,v])=>Object.values(v.c||{}).forEach(x=>x=="want"?w++:x=="done"?d++:0));
+return{ls,ts,w,d,avg:ts.length?Math.round(ts.reduce((s,[,v])=>s+v.t,0)/ts.length):"—",rd:ls.filter(([,v])=>v.r).length}};
+a.innerHTML=`<h2>${me.role=="teacher"?"Режим педагога: полный обзор":"Панель куратора, группа "+esc(me.group)}</h2>
+${me.role=="teacher"?`<select id="gf"><option value="">Все группы</option>${groups.map(g=>`<option ${g==f?"selected":""}>${esc(g)}</option>`).join("")}</select>`:""}
+<div class="card sc"><table><tr><th>Студент</th><th>Группа</th><th>Прочитано</th><th>Тестов</th><th>Ср. балл</th><th>Заданий выполнено</th><th>Хочет выполнить</th></tr>
+${rows.map(u=>{const s=st(u);return`<tr><td>${esc(u.name)}</td><td>${esc(u.group)}</td><td>${s.rd}</td><td>${s.ts.length}</td><td>${s.avg}${s.avg!="—"?"%":""}</td><td class="ok">${s.d}</td><td class="wa">${s.w}</td></tr>`}).join("")||`<tr><td class="mu">Студентов пока нет</td></tr>`}</table></div>
+${rows.map(u=>{const s=st(u);return`<details class="card"><summary><b>${esc(u.name)}</b> — подробно по урокам</summary><div class="sc"><table><tr><th>Урок</th><th>Тема</th><th>Тест</th><th>Задания</th><th>Оценка урока</th></tr>
+${s.ls.sort((x,y)=>x[0]-y[0]).map(([n,v])=>`<tr><td>${n}</td><td style="white-space:normal">${esc(LS[n-1]?.t)}</td><td>${v.t!=null?v.t+"%":"—"}</td><td>${Object.entries(v.c||{}).filter(([,x])=>x).map(([i,x])=>`${+i+1}:${x=="done"?"✓":"хочет"}`).join(" ")||"—"}</td><td>${["—","😞 плохо","🙂 хорошо","🤩 отлично"][v.f||0]}</td></tr>`).join("")||"<tr><td>Нет активности</td></tr>"}</table></div></details>`}).join("")}`;
+if($("#gf"))$("#gf").onchange=e=>{cache.g=e.target.value;panel(a)}}
+init();
+</script></body></html>
